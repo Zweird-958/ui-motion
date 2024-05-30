@@ -1,0 +1,15 @@
+{
+	"printWidth": 120,
+	"tabWidth": 2,
+	"useTabs": true,
+	"semi": false,
+	"endOfLine": "lf",
+	"overrides": [
+		{
+			"files": ["*.json", ".eslintrc", ".prettierrc"],
+			"options": {
+				"parser": "json"
+			}
+		}
+	]
+}
