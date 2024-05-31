@@ -5,23 +5,21 @@
 		"useJSXTextNode": true,
 		"ecmaVersion": 2018,
 		"sourceType": "module",
-		"project": "./tsconfig.json",
+		"project": "./tsconfig.json"
 	},
-	"ignorePatterns": ["/out", "src/Types/**/*"],
+	"ignorePatterns": ["/out"],
 	"plugins": ["@typescript-eslint", "roblox-ts", "prettier"],
 	"extends": [
 		"eslint:recommended",
 		"plugin:@typescript-eslint/recommended",
 		"plugin:roblox-ts/recommended",
-		"plugin:prettier/recommended",
+		"plugin:prettier/recommended"
 	],
 	"overrides": [
 		{
-			"files": ["src/types/**/*"],
-			"rules": {
-				"max-lines": "off",
-			},
-		},
+			"files": ["src/index.d.ts"],
+			"extends": ["plugin:roblox-ts/declaration"]
+		}
 	],
 	"rules": {
 		"prettier/prettier": "off",
@@ -31,8 +29,8 @@
 			{
 				"allowImplicit": false,
 				"checkForEach": true,
-				"allowVoid": true,
-			},
+				"allowVoid": true
+			}
 		],
 		"no-await-in-loop": "error",
 		"no-constant-binary-expression": "error",
@@ -53,8 +51,8 @@
 				"properties": "always",
 				"ignoreDestructuring": true,
 				"ignoreImports": true,
-				"ignoreGlobals": true,
-			},
+				"ignoreGlobals": true
+			}
 		],
 		"capitalized-comments": ["error", "always", { "ignoreConsecutiveComments": true }],
 		"class-methods-use-this": ["error", { "enforceForClassFields": true }],
@@ -126,8 +124,8 @@
 		"no-warning-comments": [
 			"error",
 			{
-				"terms": ["todo"],
-			},
+				"terms": ["todo"]
+			}
 		],
 		"object-shorthand": ["error", "always"],
 		"one-var": ["error", "never"],
@@ -137,8 +135,8 @@
 			"error",
 			{
 				"destructuring": "any",
-				"ignoreReadBeforeAssign": false,
-			},
+				"ignoreReadBeforeAssign": false
+			}
 		],
 		"prefer-destructuring": "error",
 		"prefer-exponentiation-operator": "error",
@@ -165,47 +163,23 @@
 			{
 				"blankLine": "always",
 				"prev": "*",
-				"next": [
-					"break",
-					"case",
-					"cjs-export",
-					"class",
-					"continue",
-					"do",
-					"if",
-					"switch",
-					"try",
-					"while",
-					"return",
-				],
+				"next": ["break", "case", "cjs-export", "class", "continue", "do", "if", "switch", "try", "while", "return"]
 			},
 			{
 				"blankLine": "always",
-				"prev": [
-					"break",
-					"case",
-					"cjs-export",
-					"class",
-					"continue",
-					"do",
-					"if",
-					"switch",
-					"try",
-					"while",
-					"return",
-				],
-				"next": "*",
-			},
+				"prev": ["break", "case", "cjs-export", "class", "continue", "do", "if", "switch", "try", "while", "return"],
+				"next": "*"
+			}
 		],
 		"quotes": [
 			"error",
 			"double",
 			{
 				"avoidEscape": true,
-				"allowTemplateLiterals": true,
-			},
+				"allowTemplateLiterals": true
+			}
 		],
 		"space-before-blocks": "error",
-		"semi": ["error", "never"],
-	},
+		"semi": ["error", "never"]
+	}
 }
