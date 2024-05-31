@@ -20,6 +20,7 @@
 		"type": "git",
 		"url": "https://github.com/zweird-958/ui-motion"
 	},
+	"homepage": "https://github.com/Zweird-958/ui-motion/blob/main/README.md",
 	"devDependencies": {
 		"@rbxts/compiler-types": "^2.3.0-types.1",
 		"@rbxts/types": "^1.0.778",
