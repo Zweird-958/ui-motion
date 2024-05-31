@@ -15,12 +15,6 @@
 		"plugin:roblox-ts/recommended",
 		"plugin:prettier/recommended"
 	],
-	"overrides": [
-		{
-			"files": ["src/index.d.ts"],
-			"extends": ["plugin:roblox-ts/declaration"]
-		}
-	],
 	"rules": {
 		"prettier/prettier": "off",
 		"roblox-ts/lua-truthiness": "off",
