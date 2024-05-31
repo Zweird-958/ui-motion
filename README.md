@@ -35,8 +35,8 @@ clickAnimation({ button, content: frame })
 
 ```ts
 goals: {
-	click: Partial<ExtractMembers<GuiObject, Tweenable>> // --> Default: { Size: UDim2.fromScale(1, 1) }
-	unclick: Partial<ExtractMembers<GuiObject, Tweenable>> // --> Default: { Size: UDim2.fromScale(0.9, 0.9) }
+	click: Partial<ExtractMembers<GuiObject, Tweenable>> // --> Default: { Size: UDim2.fromScale(0.9, 0.9) }
+	unclick: Partial<ExtractMembers<GuiObject, Tweenable>> // --> Default: { Size: UDim2.fromScale(1, 1) }
 }
 ```
 
