@@ -14,7 +14,7 @@ const goalMerge = (target: Record<string, UIGoalTween>, source?: Record<string, 
 	return goals
 }
 
-const deepMerge = (target: Record<string, unknown>, source?: Record<string, unknown>, isGoal = false) => {
+const deepMerge = (target: Record<string, unknown>, source?: Record<string, unknown>) => {
 	const newTable = { ...target }
 
 	if (!source) {
@@ -31,7 +31,7 @@ const deepMerge = (target: Record<string, unknown>, source?: Record<string, unkn
 
 		if (typeIs(value, "table") && typeIs(target[key], "table")) {
 			const targetTable = target[key] as Record<string, unknown>
-			newTable[key] = deepMerge(targetTable, value as Record<string, unknown>, isGoal || key === "goals")
+			newTable[key] = deepMerge(targetTable, value as Record<string, unknown>)
 		} else {
 			newTable[key] = value
 		}
