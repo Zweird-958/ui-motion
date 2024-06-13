@@ -56,6 +56,8 @@ export const customScale = (ui: GuiObject, scale: number, options?: Options) => 
 	if (!tween) {
 		customScaleAnimations[customName] = TweenService.Create(uiScale, tweenInfo, { Scale: scale })
 
+		customScale(ui, scale, options)
+
 		return
 	}
 

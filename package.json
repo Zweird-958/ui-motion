@@ -1,6 +1,6 @@
 {
 	"name": "@rbxts/ui-motion",
-	"version": "1.2.2",
+	"version": "1.2.3",
 	"description": "A simple package to animate UI elements in Roblox.",
 	"main": "out/init.lua",
 	"scripts": {
