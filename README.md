@@ -142,3 +142,34 @@ hoverAnimation(
 	},
 )
 ```
+
+### Scale
+
+```ts
+import { scaleUp, scaleDown, customScale } from "@rbxts/ui-motion"
+
+const button = new Instance("TextButton")
+
+scaleUp(button)
+scaleDown(button)
+customScale(button, 0.7)
+```
+
+#### Options
+
+- tweenInfo: Edit the tween information.
+
+```ts
+tweenInfo: TweenInfo // --> Default: new TweenInfo(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+```
+
+##### Example
+
+```ts
+scaleUp(button, {
+	tweenInfo: new TweenInfo(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, 0, false, 0.1),
+})
+customScale(button, 0.9, {
+	tweenInfo: new TweenInfo(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, 0, false, 0.1),
+})
+```
