@@ -77,3 +77,68 @@ clickAnimation(
 	},
 )
 ```
+
+### Hover
+
+```ts
+import { hoverAnimation } from "@rbxts/ui-motion"
+
+// Simple usage
+
+const button = new Instance("TextButton")
+
+hoverAnimation({ main: button })
+
+// If you want animate a UI element when button is clicked
+
+const button = new Instance("TextButton")
+const frame = new Instance("Frame")
+
+hoverAnimation({ main: button, content: frame })
+```
+
+#### Options
+
+- goals: Edit the goal values of the tween animation.
+
+```ts
+goals: {
+	hover: Partial<ExtractMembers<GuiObject, Tweenable>> // --> Default: { Size: UDim2.fromScale(0.9, 0.9) }
+	unhover: Partial<ExtractMembers<GuiObject, Tweenable>> // --> Default: { Size: UDim2.fromScale(1, 1) }
+}
+```
+
+- tweenInfo: Edit the tween information.
+
+```ts
+tweenInfo: TweenInfo // --> Default: new TweenInfo(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut)
+```
+
+- callbacks: Add callbacks for MouseEnter and MouseLeave events.
+
+```ts
+callbacks: {
+  MouseEnter?: () => void // --> Default: undefined
+  MouseLeave?: () => void // --> Default: undefined
+}
+```
+
+##### Example
+
+```ts
+hoverAnimation(
+	{ main: button },
+	{
+		callbacks: {
+			MouseEnter: () => {
+				print("Mouse enter")
+			},
+			MouseLeave: () => {
+				print("Mouse leave")
+			},
+		},
+		tweenInfo: new TweenInfo(0.1, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut, 0, false, 0.1),
+		goals: { hover: { Rotation: 30 }, unhover: { Rotation: 0 } },
+	},
+)
+```

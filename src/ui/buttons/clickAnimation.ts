@@ -1,7 +1,8 @@
 import { TweenService } from "@rbxts/services"
-import deepMerge from "../utils/deepMerge"
+import deepMerge from "../../utils/deepMerge"
 import { DEFAULT_OPTIONS } from "./buttons.constants"
-import { ButtonGoalTween, Options, RequiredOptions } from "./buttons.type"
+import { Options, RequiredOptions } from "./buttons.type"
+import { UIGoalTween } from "../../types/common"
 
 const clickAnimations = new Map<GuiObject, { down: Tween; up: Tween }>()
 
@@ -11,7 +12,7 @@ type UI = {
 }
 type ClickOptions = {
 	tweenInfo: TweenInfo
-	goal: ButtonGoalTween
+	goal: UIGoalTween
 }
 
 const createClickAnimation = (content: GuiObject, { tweenInfo, goal }: ClickOptions) =>

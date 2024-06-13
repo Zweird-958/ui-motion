@@ -1,3 +1,4 @@
-import clickAnimation from "./buttons/clickAnimation"
+import clickAnimation from "./ui/buttons/clickAnimation"
+import hoverAnimation from "./ui/hover/hoverAnimation"
 
-export { clickAnimation }
+export { clickAnimation, hoverAnimation }
