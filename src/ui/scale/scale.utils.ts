@@ -23,7 +23,7 @@ export const scaleUp = (ui: GuiObject, options?: Options) => {
 	if (!tween) {
 		scaleAnimationsUp.set(ui, TweenService.Create(scale, tweenInfo, { Scale: 1 }))
 
-		scaleUp(ui)
+		scaleUp(ui, options)
 
 		return
 	}
@@ -39,7 +39,7 @@ export const scaleDown = (ui: GuiObject, options?: Options) => {
 	if (!tween) {
 		scaleAnimationsDown.set(ui, TweenService.Create(scale, tweenInfo, { Scale: 0 }))
 
-		scaleDown(ui)
+		scaleDown(ui, options)
 
 		return
 	}
